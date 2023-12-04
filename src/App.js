@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import GetWatchlist from './crud Components/GetWatchlist';
+import UpdateWatchlist from './crud Components/UpdateWatchlist';
+import PostForm from './crud Components/PostWatchlist';
+import DeleteEntry from './crud Components/DeleteEntry';
+import Header from './pageStructure/Header';
+import Footer from './pageStructure/Footer';
+// import './App.css';
+// import './Styles.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <GetWatchlist />
+      <PostForm />
+      <UpdateWatchlist />
+      <DeleteEntry />
+      <Footer />
+    </>
   );
+
 }
 
 export default App;
