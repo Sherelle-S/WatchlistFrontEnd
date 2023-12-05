@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from "react-router-dom";
+import Header from "../pageStructure/Header";
+import Footer from "../pageStructure/Footer";
+
 // import axios from "axios";
 
 const Watchlist_API_Base_URL = "http://localhost:8080/watchlist/";
 
-function OrganizedWatchlist() {
+function GetWatchlist() {
     const [watchlistData, setWatchlistData] = useState([]);
 
     useEffect(() => {
@@ -24,6 +29,7 @@ function OrganizedWatchlist() {
     // return <h1>Hello Babe</h1>;
     return (
         <div>
+            <Header />
             <h2 className='text-center'>Watchlist</h2>
             <div className='row'>
                 <table className='table table-striped table-bordered'>
@@ -49,6 +55,7 @@ function OrganizedWatchlist() {
 
                         {watchlistData.map(watchlist => (
                             <tr key={watchlist.uuid}>
+                                <td>{watchlist.uuid}</td>
                                 <td>{watchlist.stockName}</td>
                                 <td>{watchlist.symbol}</td>
                                 <td>{watchlist.currency}</td>
@@ -67,6 +74,7 @@ function OrganizedWatchlist() {
                     </tbody>
                 </table>
             </div>
+            <Footer />
         </div>
     );
 }

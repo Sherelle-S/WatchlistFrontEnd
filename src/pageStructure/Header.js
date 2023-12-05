@@ -12,20 +12,20 @@ function Header(){
     return(
         <div className="nav-container">
             <ul className="header">
-                <li className="add-entry">
-                    <Link to="/add-entry" className="add-entry">Add Entry</Link>
+                <li className="addEntry">
+                    <Link to="/addEntry" className="addEntry page-links">Add Entry</Link>
                 </li>
                 <li className="show-watchlist">
-                    <Link to="/show-watchlist" className="show-watchlist">Show List</Link>
+                    <Link to="/" className="show-watchlist page-links">Show List</Link>
                 </li>
-                <li className="organize-watchlist">
-                    <Link to="/organize-watchlist" className="organize-watchlist">Organize Watchlist</Link>
+                <li className="sortedWatchlist">
+                    <Link to="/sortedWatchlist" className="sortedWatchlist page-links">Sorted Watchlist</Link>
                 </li>
-                <li className="update-entry">
-                    <Link to="/update-entry" className="update-entry">Update Entry</Link>
+                <li className="updateEntry">
+                    <Link to="/updateEntry" className="updateEntry page-links">Update Entry</Link>
                 </li>
-                <li className="delete-entry">
-                    <Link to="/delete-entry" className="delete-entry">Delete Entry</Link>
+                <li className="deleteEntry">
+                    <Link to="/deleteEntry" className="deleteEntry page-links">Delete Entry</Link>
                 </li>
                 <SearchByName />
             </ul>

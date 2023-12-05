@@ -1,24 +1,23 @@
-// import logo from './logo.svg';
 import './App.css';
-import GetWatchlist from './crud Components/GetWatchlist';
-import UpdateWatchlist from './crud Components/UpdateWatchlist';
-import PostForm from './crud Components/PostWatchlist';
-import DeleteEntry from './crud Components/DeleteEntry';
-import Header from './pageStructure/Header';
-import Footer from './pageStructure/Footer';
-// import './App.css';
-// import './Styles.css';
-
+import GetWatchlist from './pages/GetWatchlist';
+import SortedWatchlist from './pages/SortedWatchlist';
+import UpdateWatchlist from './pages/UpdateWatchlist';
+import PostForm from './pages/PostWatchlist';
+import DeleteEntry from './pages/DeleteEntry';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Header />
-      <GetWatchlist />
-      <PostForm />
-      <UpdateWatchlist />
-      <DeleteEntry />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<GetWatchlist />} />
+          <Route path="/sortedWatchlist" element={<SortedWatchlist />} />
+          <Route path="/addEntry" element={<PostForm />} />
+          <Route path="/updateEntry" element={<UpdateWatchlist />} />
+          <Route path="/deleteEntry" element={<DeleteEntry />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 

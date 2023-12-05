@@ -1,11 +1,15 @@
 import React from "react";
 import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from "react-router-dom";
+import Header from "../pageStructure/Header";
+import Footer from "../pageStructure/Footer";
 
 
 function UpdateWatchlist() {
     return (
         <>
+        <Header />
         
         <Form className="PostForm">
             <h2>Update Entry</h2>
@@ -55,8 +59,8 @@ function UpdateWatchlist() {
             Submit
           </Button>
         </Form>
+        <Footer />
         </>
-
                   
     );
 }

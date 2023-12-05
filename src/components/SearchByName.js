@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-dom";
+// import ReactDOM from "react-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function SearchByName() {
 
@@ -15,12 +17,12 @@ function SearchByName() {
             }}>
                 <input className="search-bar"
                     type="text"
-                    placeholder="Search Stock Item"
+                    placeholder="Search Stock Name"
                     onChange={(e) => {
                         setStock(e.target.value);
                     }}
                 />
-                <button className="search-stock button">
+                <button className="search-stock button"><i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
         </div>

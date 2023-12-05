@@ -74,6 +74,9 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from "react-router-dom";
+import Header from "../pageStructure/Header";
+import Footer from "../pageStructure/Footer";
 
 function PostForm() {
   const handleSubmit = async (event) => {
@@ -103,6 +106,8 @@ function PostForm() {
   };
 
   return (
+    <>
+    <Header />
     <div className="PostForm">
       <h2>Add New Stock</h2>
       <Form>
@@ -156,6 +161,8 @@ function PostForm() {
         </Button>
       </Form>
     </div>
+    <Footer />
+    </>
   );
 
 }
