@@ -43,7 +43,7 @@ function UpdateWatchlist() {
         {/* UUID */}
         <Form.Group controlId="UUID" className="mb-3 border p-3">
             <Form.Label className="form-label">UUID</Form.Label>
-            <Form.Control type="text" placeholder="UUID" className="form-control" />
+            <Form.Control type="text" placeholder="UUID" className="form-control" value={uuid} onChange={(e) => setUUID(e.target.value)} />
           </Form.Group>
 
         {/* symbol */}
@@ -73,7 +73,7 @@ function UpdateWatchlist() {
           {/* purchasePrice */}
           <Form.Group controlId="purchasePrice" className="mb-3 border p-3">
             <Form.Label className="form-label">Purchase price</Form.Label>
-            <Form.Control type="number" className="form-control" />
+            <Form.Control type="text" className="form-control" />
           </Form.Group>
 
           {/* Date Sold
